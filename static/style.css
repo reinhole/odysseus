@@ -3685,7 +3685,7 @@ body.bg-pattern-sparkles {
     }
     @media (max-width:768px){
       .box { max-height:none; }
-      .chat-container { padding:10px; flex:1; margin-top:0; padding-top:42px; min-height:0; }
+      .chat-container { padding:10px; flex:1; margin-top:0; padding-top:calc(42px + env(safe-area-inset-top, 0px)); min-height:0; }
       .scroll-nav-btn { width:44px; height:44px; font-size:14px; margin-bottom:0; }
       .send-btn { width:48px; height:48px !important; border-radius:12px; }
       .send-btn svg { width:22px; height:22px; }
@@ -3883,9 +3883,9 @@ body.bg-pattern-sparkles {
       .hamburger-btn {
         width: 44px;
         height: 44px;
-        top: 6px;
+        top: calc(6px + env(safe-area-inset-top, 0px));
         left: auto !important;
-        right: 4px !important;
+        right: calc(4px + env(safe-area-inset-right, 0px)) !important;
         -webkit-tap-highlight-color: transparent;
       }
       .hamburger-btn:hover,
@@ -3898,8 +3898,8 @@ body.bg-pattern-sparkles {
       .mobile-new-chat-btn {
         display: flex;
         position: fixed;
-        top: 12px;
-        left: 8px;
+        top: calc(12px + env(safe-area-inset-top, 0px));
+        left: calc(8px + env(safe-area-inset-left, 0px));
         z-index: 210;
         width: 32px;
         height: 32px;
